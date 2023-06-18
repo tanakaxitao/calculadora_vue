@@ -12,7 +12,7 @@ const soma = () => {
 };
 
 const subtracao = () => {
-  return `${estado.numero1 - estado.numero2}`;
+  return estado.numero1 - estado.numero2;
 };
 
 const divisao = () => {
@@ -66,6 +66,7 @@ const valorPadrao = () => {
         <span class="fs-2 text-success"
           >Resultado :
           <span v-if="operacoes() >= 0">{{ operacoes() }}</span>
+          <span v-else-if="operacoes() <= 0">{{ operacoes() }}</span>
           <span v-else>Preencha os campos</span>
         </span>
       </div>
